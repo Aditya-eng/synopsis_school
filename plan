@@ -1,0 +1,138 @@
+Program structure for school python synopsis:(*)
+1.User is outputted with a question asking if he will choose multiple random programs or try their luck.
+2. Present the user with ROLL-A-DICE simulator.
+		-As the name of the program suggests, we will be imitating a rolling dice.
+		-This is one of the interesting python projects and will generate a random number each dice the program runs.
+		-The users can use the dice repeatedly for as long as he wants.
+		- When the user rolls the dice, the program will generate a random number between 1 and 6 (as on a standard dice).
+
+3. After the user rolls a dice, the number on the dice is shown.
+4. Then a specific number performs certain menu driven short programs, the list is given as:
+		Number on dice						Function performed
+		1										Email Slicer
+		2										Guess the word
+		3										Rock, Paper, Scissors
+		4										Leap it!
+		5										Find out Fibonacci
+		6										Currency converter/ Countdown
+
+
+-Email Slicer: The program helps get you the username and domain name from an email address.
+-Guess the word: This name focuses on the user having to guess the randomly generated word.
+	You can create a list from which the word would have to be guessed.
+	Also set a cap on the number of guesses allowed.
+	After this, you can create the rules yourself!
+	When the user inputs the word, you can indicate whether the alphabet written appears in this particular position or not.
+	You will need a function to check if the user is inputting alphabets or numbers and to display error messages appropriately.
+-Rock, Paper ,Scissors: We again use the random function here.
+	You make a move first and then the program makes one.
+	To indicate the move, you can either use a single alphabet or input an entire string.
+	A function will have to be set up to check the validity of the move.
+-Leap it!: In this python project, you input a year and check whether it is a leap year or not.
+	For this, you’ll have to create a function that recognizes the pattern of leap years and can try fitting the inputted year into the pattern.
+	In the end, you can print the result using a boolean expression.
+-Find out Fibonacci: You input a number and the function created checks whether the number belongs to the Fibonacci sequence or not.
+	The underlying workings are similar to the above ‘Leap it!’ program.
+-Currency converter/Countdown Calc: “ https://www.youtube.com/watch?v=zA1JEk4Cu_w “
+	Normal currency converter.
+
+
+
+
+*usage of
+import https://docs.python.org/3/reference/import.html
+random https://docs.python.org/3/library/random.html
+strip() https://python-reference.readthedocs.io/en/latest/docs/str/strip.html
+def "functions in python" https://docs.python.org/2.0/ref/function.html
+how a number is in fibonacci --A number is Fibonacci if and only if one or both of (5*n^2 + 4) or (5*n^2 – 4) is a perfect square
+
+
+
+            print("You're really lucky. You got the chance to slice your email!! ")
+            email = input("Input your EMAIL ID to slice it!: ").strip()
+            username = email[:email.index('@')]
+            domain = email[email.index('@') + 1:]
+            print("Your username is ", username, " & domain is ", domain)
+            email1 = input("If you want to roll another dice press 'cont' ,if not type 'STOP': ")
+            if email1 == "cont":
+                continue
+            else:
+                print("STOPPED SUCCESSFULLY!(you typed STOP or something else)")
+
+
+
+
+if isinstance(int(fib2),int) or type(fib4)== type(float):
+        print(fib1,"is a fibonacci number.")
+        print(fib1,fib2,fib3)
+else:
+    print("Try again!")
+
+
+if [".","0"] in l1:
+    print("fibonacci")
+else :
+    print("not Fibonacci")
+
+
+
+
+
+
+
+    str1 = str(fib2)
+l1 = list(str1)
+l1.reverse()
+print(l1)
+
+
+
+
+
+
+
+
+
+len1 = len(l1)-2
+print(len1)
+i = "."
+j="0"
+l2 = [j,i]
+print(l2)
+
+if len1 == 1:
+    l2.append(str(len1))
+    print(l2)
+else:
+    for i in range(len1):
+        l2.append(i)
+
+
+
+
+----------------------------------
+
+
+
+print(l2,l1)
+import collections
+def compareList(l1,l2):
+   if(collections.Counter(l1)==collections.Counter(l2)):
+      return "Equal"
+   else:
+      return "Non equal"
+print("First comparison",compareList(l1,l2))
+
+
+import collections
+def compareList(l1,l2):
+   if(str(collections.Counter(l1))==str(collections.Counter(l2))):
+      return "Equal"
+   else:
+      return "Non equal"
+l1=[1,2,3]
+l2=[2,1,3]
+print("First comparison",compareList(l1,l2))
+l3=[1,2,4]
+l4=[1,2,4]
+print("Second comparison",compareList(l3,l4))
