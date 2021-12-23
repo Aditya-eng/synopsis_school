@@ -9,11 +9,11 @@ Program structure for school python synopsis:(*)
 3. After the user rolls a dice, the number on the dice is shown.
 4. Then a specific number performs certain menu driven short programs, the list is given as:
 		Number on dice						Function performed
-		1										Email Slicer
-		2										Guess the word
-		3										Rock, Paper, Scissors
-		4										Leap it!
-		5										Find out Fibonacci
+		1										Email Slicer☑️
+		2										Guess the word☑️
+		3										Rock, Paper, Scissors☑️
+		4										Leap it!☑️
+		5										Find out Fibonacci☑️
 		6										Currency converter/ Countdown
 
 
@@ -29,13 +29,13 @@ Program structure for school python synopsis:(*)
 	To indicate the move, you can either use a single alphabet or input an entire string.
 	A function will have to be set up to check the validity of the move.
 -Leap it!: In this python project, you input a year and check whether it is a leap year or not.
-	For this, you’ll have to create a function that recognizes the pattern of leap years and can try fitting the inputted year into the pattern.
-	In the end, you can print the result using a boolean expression.
+    A leap year is exactly divisible by 4 except for century years (years ending with 00).
+    The century year is a leap year only if it is perfectly divisible by 400.
 -Find out Fibonacci: You input a number and the function created checks whether the number belongs to the Fibonacci sequence or not.
 	The underlying workings are similar to the above ‘Leap it!’ program.
 -Currency converter/Countdown Calc: “ https://www.youtube.com/watch?v=zA1JEk4Cu_w “
 	Normal currency converter.
-
+-
 
 
 
@@ -45,6 +45,15 @@ random https://docs.python.org/3/library/random.html
 strip() https://python-reference.readthedocs.io/en/latest/docs/str/strip.html
 def "functions in python" https://docs.python.org/2.0/ref/function.html
 how a number is in fibonacci --A number is Fibonacci if and only if one or both of (5*n^2 + 4) or (5*n^2 – 4) is a perfect square
+
+
+
+
+
+
+
+
+
 
 
 
