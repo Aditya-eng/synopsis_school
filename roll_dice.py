@@ -8,8 +8,7 @@ def email_slicer():
         print("You're really lucky. You got the chance to slice your email!! ")
         email = input("Input your EMAIL ID to slice it!: ").strip()
         if "@" not in email:
-            print("NOT")
-            break
+            print("@ is not there.")
         username = email[:email.index('@')]
         domain = email[email.index('@') + 1:]
         print("Your username is ", username, " & domain is ", domain)
@@ -19,7 +18,6 @@ def email_slicer():
         else:
             print("STOPPED SUCCESSFULLY!(you typed STOP or something else)")
             break
-
 
 def guess_the_word():
     print("OMG! It's GUESS THE WORD.")
@@ -110,6 +108,8 @@ def countdown_calculator():
     #     else:
     #         print("STOPPED SUCCESSFULLY!(you typed STOP or something else)")
     #         break
+    print("Welcome to Countdown Calculator!!!")
+    print("Enter the starting date and eding date to find the period between them.")
 
     a, b, c = [int(x) for x in input("Enter the starting date:").split()]
     print("Date is ", a, b, c)
@@ -138,7 +138,6 @@ def countdown_calculator():
             print(day, "Day", month, "-month", year, "-Year")
     else:
         print(day, "Day", month, "-month", year, "-Year")
-
 
 def fibonacci_checker():
     for i in range(10):
@@ -169,49 +168,58 @@ def rock_paper_scissors():
     print("Welcome to rock-paper-scissors !!!")
     rps4 = int(input("Enter the number of times you want to play: "))
     i=0
-    while i != rps4:
-        i+=1
-        print("R for Rock, P for Paper and S for Scissors, STOP for quitting.")
-        rps3 = input("Enter when you're ready: ")
-        rps1 = random.choice(rpslist)
-        if rps3.upper() == rps1:
-            print(rps3.upper())
-            print("Uh'oh try again")
+    if type(rps4) == int:
+        while i != rps4:
+            i += 1
+            print("R for Rock, P for Paper and S for Scissors, STOP for quitting.")
+            rps3 = input("Enter when you're ready: ")
             rps1 = random.choice(rpslist)
-            continue
-        elif (rps3.upper() == "R" and rps1 == "P") or (rps3.upper() =="P" and rps1 == "S" ) or (rps3.upper() == "S" and rps1=="R"):
-            print("You LOSE, it was ", rps1)
-            rps1 = random.choice(rpslist)
-            print()
-        elif (rps3.upper() == "R" and rps1=="S") or (rps3.upper() == "P" and rps1=="R") or (rps3.upper() == "S" and rps1=="P"):
-            print("You WIN, it was ",rps1)
-            rps1 = random.choice(rpslist)
-            print()
-        elif rps3.upper() == "STOP" or rps3 == "QUIT":
-            print('STOPPED SUCCESSFULY')
-            break
+            if rps3.upper() == rps1:
+                print(rps3.upper())
+                print("Uh'oh try again")
+                rps1 = random.choice(rpslist)
+                continue
+            elif (rps3.upper() == "R" and rps1 == "P") or (rps3.upper() == "P" and rps1 == "S") or (
+                    rps3.upper() == "S" and rps1 == "R"):
+                print("You LOSE, it was ", rps1)
+                rps1 = random.choice(rpslist)
+                print()
+            elif (rps3.upper() == "R" and rps1 == "S") or (rps3.upper() == "P" and rps1 == "R") or (
+                    rps3.upper() == "S" and rps1 == "P"):
+                print("You WIN, it was ", rps1)
+                rps1 = random.choice(rpslist)
+                print()
+            elif rps3.upper() == "STOP" or rps3 == "QUIT":
+                print('STOPPED SUCCESSFULY')
+                break
 
-        else:
-            print("Type ONLY R,P,S")
-            print()
+            else:
+                print("Type ONLY R,P,S")
+                print()
+    else:
+        print("NOT A NUMBER")
+
+
 
 def leap_it():
 
     for i in range(10):
         li = input("Enter the year(0 for stop): ")
-        if li % 4==0:
-            if li &100 == 0:
-                if li%400 == 0:
-                    print(li," is a Leap Year.!")
+        if len(li) <= 4:
+            if li % 4 == 0:
+                if li % 100 == 0:
+                    if li % 400 == 0:
+                        print(li, " is a Leap Year.!")
+                    else:
+                        print(li, " is not a Leap Year.")
                 else:
-                    print(li," is not a Leap Year.")
+                    print(li, " is a leap year.")
+            elif li == 0:
+                print("STOPPED SUCCESSFULLY")
+                break
             else:
-                print(li," is a leap year.")
-        elif li == 0:
-            print("STOPPED SUCCESSFULLY")
-            break
-        else:
-            print(li, " is not a Leap Year.")
+                print(li, " is not a Leap Year.")
+
 
 
 
@@ -228,28 +236,21 @@ if type(inp1.upper()) == type(str()) or type(inp1.upper()) == type(int()):
         if r1 == 1:
             email_slicer()
 
-        elif r1==2 :
+        elif r1==7 :
             guess_the_word()
 
-        elif r1==3:
+        elif r1==7:
             fibonacci_checker()
 
-        elif r1==4 :
+        elif r1==7 :
             rock_paper_scissors()
 
-        elif r1==5:
+        elif r1==7:
             leap_it()
             print()
 
         else:
-            currency_converter()
-# elif r1.upper() == "CHOOSE":
-#
-
-
-
-
-#############################
-
+            email_slicer()
+            # countdown_calculator()
 
 
